@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>入职小黑子欢迎邮件</title>
+
+</head>
+<body>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1968762964&auto=1&height=66"></iframe>
+欢迎<span th:text="${name}">加入小黑子大家庭,您的入职信息如下:</span>
+<table border="1" style="size: 20px;width: 200px;text-align: center;font-size: larger">
+    <tr>
+        <td style="color: aqua">姓名</td>
+        <td th:text="${name}"></td>
+    </tr>
+    <tr>
+        <td style="color: aquamarine">性别</td>
+        <td th:text="${gender}"></td>
+    </tr>
+    <tr>
+        <td style="color: greenyellow">地址</td>
+        <td th:text="${address}"></td>
+    </tr>
+    <tr>
+        <td style="color:#000;">婚姻</td>
+        <td th:text="${wedlock}"></td>
+    </tr>
+    <tr>
+        <td style="color: fuchsia">籍贯</td>
+        <td th:text="${nativePlace}"></td>
+    </tr>
+    <tr>
+        <td style="color: wheat">聘用形式</td>
+        <td th:text="${engageForm}"></td>
+    </tr>
+    <tr>
+        <td style="color: darkturquoise">最高学历</td>
+        <td th:text="${tiptopDegree}"></td>
+    </tr>
+    <tr>
+        <td style="color: darkolivegreen">学校</td>
+        <td th:text="${school}"></td>
+    </tr>
+    <tr>
+        <td>在职状态</td>
+        <td th:text="${workState}"></td>
+    </tr>
+
+</table>
+<p>
+    这是一支正行走在路上的存在着发展中的诸多不足管理水平与合作水平有待加强的年轻团队。正因为大家的出现，给了我们彼此的机会与平台，让我们一齐学习，去共同提升共同规范，去赶超更好的自我，创造更好的碧丽！
+</p>
+
+</body>
+
+</html>
