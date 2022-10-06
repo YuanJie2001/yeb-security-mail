@@ -3,6 +3,7 @@
 #### 介绍
 基于springboot,springsecurity+jwt, mybatisPlus,redis实现的后端服务模块
 .主要用来记录在springsecurity下的权限访问控制和电子邮件等三方服务测试
+dev分支测试多源认证,在过滤器层解决认证问题.其中usernameProvider有些问题
 
 #### 软件架构
 软件架构说明
