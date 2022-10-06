@@ -3,7 +3,7 @@
 #### 介绍
 基于springboot,springsecurity+jwt, mybatisPlus,redis实现的后端服务模块
 .主要用来记录在springsecurity下的权限访问控制和电子邮件等三方服务测试
-
+主分支主要用来测试单点业务认证
 #### 软件架构
 软件架构说明
 
