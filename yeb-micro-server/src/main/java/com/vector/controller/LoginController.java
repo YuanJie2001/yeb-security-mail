@@ -1,5 +1,6 @@
 package com.vector.controller;
 
+import com.vector.annotation.SystemLog;
 import com.vector.service.IAdminService;
 import com.vector.vo.RespVO;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ public class LoginController {
      *  登录之后返回token
       */
     @PostMapping("/login")
+    @SystemLog(businessName = "登陆业务")
     public RespVO login(){
          return adminService.login();
     }

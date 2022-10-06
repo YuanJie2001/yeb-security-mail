@@ -1,6 +1,6 @@
 package com.vector.security;
 
-import com.vector.security.handler.*;
+import com.vector.handler.*;
 import com.vector.security.username.UsernameFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

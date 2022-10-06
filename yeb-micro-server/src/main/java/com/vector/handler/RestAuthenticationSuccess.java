@@ -1,4 +1,4 @@
-package com.vector.security.handler;
+package com.vector.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vector.pojo.LoginEntity;
