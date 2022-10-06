@@ -65,4 +65,5 @@ mybatis-plus:
 logging:
   level:
     com:
-      vector: debug
+      vector:
+        mapper: debug

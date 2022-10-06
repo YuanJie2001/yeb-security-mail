@@ -2,12 +2,9 @@ package com.vector.service;
 
 import com.vector.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.vector.pojo.Menu;
 import com.vector.pojo.Role;
-import com.vector.vo.AdminLoginVO;
 import com.vector.vo.RespVO;
 
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 import java.util.List;
 
@@ -21,7 +18,7 @@ import java.util.List;
  */
 public interface IAdminService extends IService<Admin> {
 
-    RespVO login(AdminLoginVO adminLoginVO, HttpServletRequest request);
+    RespVO login();
 
     RespVO logout();
 

@@ -3,6 +3,7 @@ package com.vector.controller;
 
 import com.vector.service.IAdminService;
 import com.vector.vo.RespVO;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -29,6 +30,12 @@ public class AdminController {
      */
     @GetMapping("/info")
     public RespVO getAdminInfo(Principal principal){
+        return adminService.getAdminInfo(principal);
+    }
+
+    @GetMapping("/info-annotations")
+    @Secured("ROLE_manager")
+    public RespVO getInfo(Principal principal){
         return adminService.getAdminInfo(principal);
     }
 }

@@ -42,7 +42,7 @@ public class MailTask {
         List<MailLog> list = mailLogService.list(new QueryWrapper<MailLog>()
                 .eq("status", 0)
                 .lt("tryTime", LocalDateTime.now()));
-        if(CollectionUtils.isEmpty(list)){
+        if (CollectionUtils.isEmpty(list)){
             return;
         }
         List<MailLog> collect = list.stream().map(mailLog -> {
