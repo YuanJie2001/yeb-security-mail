@@ -1,7 +1,6 @@
 package com.vector.security;
 
 import com.vector.handler.*;
-import com.vector.security.username.UsernameFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -79,20 +78,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    /**
-     * 自定义filter工厂
-     *
-     * @return LoginFilter
-     */
-    @Bean
-    public UsernameFilter usernameFilter() throws Exception {
-        UsernameFilter usernameFilter = new UsernameFilter();
-        usernameFilter.setAuthenticationManager(authenticationManagerBean());
-        usernameFilter.setAuthenticationSuccessHandler(restAuthenticationSuccess); // 认证成功处理
-        usernameFilter.setAuthenticationFailureHandler(restAuthenticationFailure); // 认证失败处理
-        return usernameFilter;
-    }
-
     @Override
     public void configure(WebSecurity web) {
         // 放行路径,不走过滤器链
@@ -138,9 +123,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          * before: 放在过滤器链哪一个filter之前
          * after: 放在过滤器链哪一个filter之后
          */
-        http.addFilterAt(usernameFilter(), UsernamePasswordAuthenticationFilter.class);
+
         // 添加jwt 登录授权过滤器
-        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernameFilter.class);
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         // 添加自定义未授权和未登录结果返回
         http.exceptionHandling()
                 .authenticationEntryPoint(restAuthenticationEntryPoint) // 认证失败异常处理器
