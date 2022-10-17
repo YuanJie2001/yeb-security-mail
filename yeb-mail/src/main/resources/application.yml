@@ -20,7 +20,7 @@ spring:
     # 发送者的邮箱地址
     username: m13781858837@163.com
     # 授权码(在邮箱开通时获取)
-    password: TZFUBYZMYTJCYOBS
+    password: xxxxxxxxxxxxS
     # 端口号 (不同邮箱端口号不同)
     port: 465
     properties:
